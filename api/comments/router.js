@@ -21,13 +21,13 @@ router.post('/comment', (req, res, next) => {
         .catch(next)
 });
 
-router.get('/comment/:id', (req, res, next) => {
-    let id = req.params._id;
-    Comment.findOne({ id: id })
-        .then(function (comment) {
-        res.json({comment})
-    }).catch(next)
-});
+// router.get('/comment/:id', (req, res, next) => {
+//     let id = req.params._id;
+//     Comment.findOne({ id: id })
+//         .then(function (comment) {
+//         res.json({comment})
+//     }).catch(next)
+// });
 
 // router.post('/comment/:id', function (req, res) {
 //     Comment.findById(req.params.id, function (err, theUser) {
@@ -42,13 +42,13 @@ router.get('/comment/:id', (req, res, next) => {
 //     });
 // });
 
-router.get('/category/:category', (req, res, next) => {
-    Comment
-        .find({category: req.params.category})
-        .then(comments => {
-            res.json({comments})
-        })
-        .catch(next)
-});
+// router.get('/category/:category', (req, res, next) => {
+//     Comment
+//         .find({category: req.params.category})
+//         .then(comments => {
+//             res.json({comments})
+//         })
+//         .catch(next)
+// });
 
 module.exports = router;
