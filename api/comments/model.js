@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
     // author: {name: {type: String},
     //          avatar: {type: String}},
-    // theme: {type: String},
+    theme: {type: String},
     text: { type: String},
     type: { type: String },
     // typeComment: {type: Boolean},
